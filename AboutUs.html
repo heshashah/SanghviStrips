@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanghvi Strips</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background-image: url("https://i.pinimg.com/736x/28/3f/b4/283fb4f4c152896d6a65d78368a15230.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            background-color: transparent;
+            padding: 0.5%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 40px;
+        }
+
+        .logo-navbar {
+            margin-top: 30px;
+            height: 100px;
+            width: 150px;
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: whitesmoke;
+            margin-left: 5px;
+        }
+
+        .logo-square {
+            height: 100px;
+            width: 100px;
+            margin-right: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* Dropdown Products Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: gray;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+            top: 100%;
+            left: 0;
+            opacity: 0.9;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main Philosophy Section */
+        .container {
+            padding: 140px 20px 60px;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container h1 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #f7931e;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .label {
+            background-color: #f7931e;
+            padding: 15px 40px;
+            font-weight: bold;
+            font-size: 24px;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .line-text {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+            text-align: left;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .line {
+            width: 4px;
+            background-color: #f7931e;
+            height: auto;
+            margin-top: 5px;
+        }
+
+        .line-text p,
+        .line-text ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Qoute Section */
+        .quote-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            margin-top: 150px;
+            height: 600px
+        }
+
+        .quote-left,
+        .quote-right {
+            flex: 1;
+            min-width: 300px;
+            box-sizing: border-box;
+            height: 300px;
+        }
+
+        .quote-left img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            height: 500px;
+        }
+
+        .quote-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .quote-author {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Pillars Section */
+        .pillars-section {
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 40px;
+            padding: 60px 20px;
+            background-color: #fff;
+            position: relative;
+            opacity: 0.9;
+            margin: 40px auto;
+            max-width: 1200px;
+
+        }
+
+        .black {
+            color: black;
+        }
+
+        .pillars-section h2 {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .pillars-section h2 {
+            color: black;
+        }
+
+        .pillars-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pillar {
+            flex: 1;
+            min-width: 280px;
+            max-width: 340px;
+            text-align: left;
+        }
+
+        .pillar-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .pillar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .pillar p {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .get-quote-btn {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            text-decoration: none;
+            border: 2px solid #0d3c61;
+            border-radius: 50%;
+            padding: 20px 25px;
+            font-weight: bold;
+            color: #0d3c61;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .get-quote-btn:hover {
+            background-color: #0d3c61;
+            color: white;
+        }
+
+
+        /* CTA Section */
+        .cta-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar-brand">
+            <img src="Sanghvi Strips.png" alt="Sanghvi Logo" class="logo-navbar" />
+        </div>
+        <ul>
+            <li><a href="LandingPage.html"><b>Home</b></a></li>
+            <li class="dropdown">
+                <a href="#"><b>Our Products</b></a>
+                <div class="dropdown-content">
+                    <a href="Slabs.html">Slabs</a>
+                    <a href="Blooms.html">Blooms</a>
+                    <a href="HR.html">Hot Rolled (HR) Coils</a>
+                    <a href="CR.html">Cold Rolled (CR) Coils</a>
+                    <a href="Plates.html">Plates</a>
+                </div>
+            </li>
+            <li><a href="AboutUs.html"><b>About Us</b></a></li>
+            <li><a href="ContactUs.html"><b>Contact Us</b></a></li>
+        </ul>
+    </nav>
+
+    <!-- Quote Section -->
+    <div class="quote-container">
+        <div class="quote-left">
+            <img src="VishalShahPhoto.jpg" alt="CEO Photo" />
+
+        </div>
+        <div class="quote-right">
+            <p class="quote-text">
+                "Quality is never an accident; it is always the result of intelligent effort."
+            </p>
+            <p class="quote-author">– Mr. Vishal Shah</p>
+        </div>
+    </div>
+
+    <!-- Philosophy Section -->
+    <div class="container">
+        <h1>Our Philosophy</h1>
+
+        <div class="section">
+            <div class="label">Vision</div>
+            <div class="line-text">
+                <div class="line"></div>
+                <p>Building Nations,<br />Empowering Communities</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="label">Values</div>
+            <div class="line-text">
+                <div class="line"></div>
+                <ul>
+                    <li>Extreme Ownership</li>
+                    <li>Better Than Before</li>
+                    <li>Respect For People</li>
+                    <li>Sustainability</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pillars Section -->
+    <section class="pillars-section">
+        <h2>3 Fortran Steel Pillars That Make The Magic Happen</h2>
+        <div class="pillars-container">
+            <div class="pillar">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="Check Icon"
+                    class="pillar-icon" />
+                <h3 class="black">In-House Laboratories</h3>
+                <p>
+                    Our state-of-the-art in-house laboratories are the backbone of our manufacturing excellence.
+                    Equipped with advanced tools like Spectrometers, Hardness Machines, Temperature Meters, Verniers,
+                    and a Chemical lab, our steel plant's facilities support the meticulous crafting of steel products.
+                </p>
+            </div>
+            <div class="pillar">
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709496.png" alt="Compliance Icon"
+                    class="pillar-icon" />
+                <h3 class="black">Compliance with Domestic and International Standards</h3>
+                <p>
+                    At Fortran Steel, we pride ourselves on aligning with both domestic and international standards.
+                    Adhering to stringent guidelines from BIS, ASTM, ISO and CE our products not only meet but often
+                    exceed the toughest industry expectations.
+                </p>
+            </div>
+            <div class="pillar">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828673.png" alt="Shield Icon"
+                    class="pillar-icon" />
+                <h3 class="black">No-Cost Quality Assurance</h3>
+                <p>
+                    Still not sure whether our steel range is the right fit for your company? We prioritize client
+                    satisfaction and trust above all. Experience the elite quality of our products firsthand by
+                    requesting free samples from our product range.
+                </p>
+            </div>
+        </div>
+        <a href="ContactUs.html" class="get-quote-btn">GET QUOTE</a>
+    </section>
+
+    <!-- Footer -->
+    <section class="cta-section">
+        <p>Designed by Sanghvi Strips</p>
+    </section>
+
+</body>
+
+</html>

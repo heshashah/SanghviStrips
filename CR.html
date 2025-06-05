@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Rolled</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            overflow-x: hidden;
+        }
+
+        .top-section {
+            position: relative;
+            height: 100vh;
+            background: url('https://i.pinimg.com/736x/80/3c/51/803c51d96e82bf98982e8b91ffa4a59a.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            background-color: transparent;
+            padding: 0 40px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+        }
+
+        /* Logo + Nav Links as one group */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .logo-navbar {
+            height: 100px;
+            width: 150px;
+            margin-right: 20px;
+            /* Reduced from 500px */
+            
+        }
+
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-self: right;
+        }
+
+        .nav-links li {
+            position: relative;
+            margin: 0 1rem;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            /* Changed from black to white */
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Dropdown Products Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: gray;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+            top: 100%;
+            left: 0;
+            opacity: 0.9;
+        }
+
+        .dropdown-content a {
+            color: white;
+            /* Changed from black to white */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Info Section */
+        .info-section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .info-section h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .info-section p {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .info-section {
+                width: 90%;
+                padding: 40px 10px;
+                padding-top: 250px;;
+            }
+
+            .info-section h1 {
+                font-size: 2rem;
+            }
+
+            .info-section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-section p {
+                font-size: 0.9rem;
+            }
+
+            .cta-section {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Section -->
+    <div class="top-section">
+        <!-- Navbar inside top section -->
+        <nav>
+            <div class="navbar-brand">
+                <img src="Sanghvi Strips.png" alt="Sanghvi Logo" class="logo-navbar" />
+            </div>
+
+            <div class="right">
+                <ul class="nav-links">
+                    <li><a href="LandingPage.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="Product.html">Our Products</a>
+                        <div class="dropdown-content">
+                            <a href="Slabs.html">Slabs</a>
+                            <a href="Blooms.html">Blooms</a>
+                            <a href="HR.html">Hot Rolled (HR) Coils</a>
+                            <a href="CR.html">Cold Rolled (CR) Coils</a>
+                            <a href="Plates.html">Plates</a>
+                        </div>
+                    </li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Info Section with white background -->
+    <div class="info-section">
+        <h1>Cold Rolled (CR) coils</h1>
+        <p>Cold-rolled (CR) stainless steel coils are produced by passing stainless steel through rollers at room
+            temperature,
+            which helps in achieving a smoother surface and more precise dimensions. This process involves the metal
+            being
+            rolled to a thinner gauge without heating, which results in a harder and stronger material compared to
+            hot-rolled steel.
+            Cold rolling also enhances the aesthetic appearance of the steel by producing a shiny, reflective surface
+            that is often
+            used for applications where aesthetics and high strength are important, such as in kitchen appliances,
+            automotive parts,
+            and architectural components.
+            <br>
+            In addition to its strength and surface finish, cold-rolled stainless steel also offers improved dimensional
+            accuracy, making it ideal for precise applications. The process eliminates any oxidation and scale that
+            typically occurs with hot rolling, offering a cleaner, more durable material. Cold-rolled stainless steel
+            coils are often used in industries where quality and precision are key, such as in manufacturing,
+            construction, and even medical devices.
+        </p>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        Designed by Sanghvi Strips
+    </div>
+
+</body>
+
+</html>
