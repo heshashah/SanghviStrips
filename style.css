@@ -105,13 +105,16 @@ nav ul li a {
   font-size: 2rem;
   color: whitesmoke;
   cursor: pointer;
-  padding-right: 20px;
+  
+  /* Removed padding-right here as it will be handled in the media query */
 }
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    margin-right: 20px; /* Added right margin for hamburger on mobile */
+    
   }
 
   .nav-links {
@@ -121,10 +124,11 @@ nav ul li a {
     top: 100%;
     right: 0;
     background-color: rgba(0, 0, 0, 0.95);
-    width: 100%;
+    width: 50%;
     padding: 60px 0 20px 0;
     text-align: center;
     z-index: 4;
+    opacity: 0.8;
   }
 
   .nav-links.show {

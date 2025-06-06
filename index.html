@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sanghvi Strips</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanghvi Strips</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="navbar-brand">
-      <img src="logo.png" alt="Sanghvi Strips Logo" class="logo-navbar" />
-      <span class="brand-name">Sanghvi Strips</span>
-    </div>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Our Products</a>
-        <div class="dropdown-content">
-          <a href="#">Slabs</a>
-          <a href="#">Blooms</a>
-          <a href="#">Hot Rolled (HR) Coils</a>
-          <a href="#">Plates</a>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar-brand">
+            <img src="Sanghvi Strips.png" alt="Sanghvi Strips Logo" class="logo-navbar" />
         </div>
-      </li>
-    </ul>
-  </nav>
 
-  <!-- Hero Section with Video -->
-  <div class="top-section">
-    <video autoplay muted loop>
-      <source src="background.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-center-text">
-      <h1>Sanghvi Strips</h1>
-      <p>Driven by a vision of a <br><strong>stainless steel future,</strong><br> <em>we forge ahead with passion.</em></p>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Our Products</a>
+                <div class="dropdown-content">
+                    <a href="#">Slabs</a>
+                    <a href="#">Blooms</a>
+                    <a href="#">Hot Rolled (HR) Coils</a>
+                    <a href="#">Plates</a>
+                </div>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <div class="top-section">
+        <video autoplay muted loop>
+            <source src="IMG_7193.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-center-text">
+            <h1>Sanghvi Strips</h1>
+            <p>Driven by a vision of a <br><strong>stainless steel future,</strong><br> <em>we forge ahead with
+                    passion.</em></p>
+        </div>
     </div>
-  </div>
 
-  <!-- Placeholder Collage -->
-  <img src="collage.jpg" alt="Collage" class="collage" />
+    <!-- Placeholder Collage -->
+    <img src="SS_Collage.png" alt="Collage" class="collage" />
 
-  <!-- Products Section -->
-  <div class="container">
-    <h1>Explore Our <span class="highlight">Products</span></h1>
-    <div class="products">
-      <div class="product-card">
-        <img src="slabs.jpg" alt="Slabs" />
-        <div class="label">Slabs</div>
-      </div>
-      <div class="product-card">
-        <img src="blooms.jpg" alt="Blooms" />
-        <div class="label">Blooms</div>
-      </div>
-      <div class="product-card">
-        <img src="hr-coils.jpg" alt="HR Coils" />
-        <div class="label">HR Coils</div>
-      </div>
-      <div class="product-card">
-        <img src="plates.jpg" alt="Plates" />
-        <div class="label">Plates</div>
-      </div>
+    <!-- Products Section -->
+    <div class="container">
+        <h1>Explore Our <span class="highlight">Products</span></h1>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVXQVQMplUXdyw3jp-H2xPbW1mNQ6bF_j7Wg&s"
+                    alt="Slabs" href="Slabs.html" />
+                <div class="label">Slabs</div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/af/54/36/af54360ea7678d1ac6cf460f40eebfbd.jpg" alt="Blooms"
+                    href="Blooms.html" />
+                <div class="label">Blooms</div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/b7/83/72/b783723340729e1899a6f10002a498d3.jpg" alt="HR Coils"
+                    href="HR.html" />
+                <div class="label">HR Coils</div>
+            </div>
+            <div class="product-card">
+                <a href="CR.html">
+                    <img src="https://i.pinimg.com/736x/a4/23/12/a4231240d1a3f5680956be67b654e2fd.jpg"
+                        alt="Cold Rolled Coils" href="CR.html">
+                </a>
+                <div class="label">Cold Rolled (CR) Coils</div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/2b/9b/c9/2b9bc932e1ad063eea1e4b80b8b504f0.jpg" alt="Plates"
+                    href="Plates.html" />
+                <div class="label">Plates</div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- CTA Footer -->
-  <div class="cta-section">
-    Contact us to know more about our premium steel offerings.
-  </div>
+    <!-- CTA Footer -->
+    <div class="cta-section">
+        Designed by Sanghvi Strips
+    </div>
 
-  <script>
-    function toggleMenu() {
-      const links = document.getElementById("navLinks");
-      links.classList.toggle("show");
-    }
-  </script>
+    <script>
+        function toggleMenu() {
+            const links = document.getElementById("navLinks");
+            links.classList.toggle("show");
+        }
+    </script>
 </body>
+
 </html>
