@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Navbar */
+/* Navbar Styles */
 nav {
     display: flex;
     justify-content: space-between;
@@ -46,12 +47,6 @@ nav {
     margin-left: 5px;
 }
 
-.logo-square {
-    height: 100px;
-    width: 100px;
-    margin-right: 5px;
-}
-
 nav ul {
     display: flex;
     list-style: none;
@@ -68,7 +63,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Dropdown Products Menu */
+/* Dropdown Menu */
 .dropdown {
     position: relative;
 }
@@ -86,10 +81,11 @@ nav ul li a {
 }
 
 .dropdown-content a {
-    color: white;
+    color: whitesmoke;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: 1rem;
     text-align: left;
 }
 
@@ -102,12 +98,13 @@ nav ul li a {
     display: block;
 }
 
-/* Hamburger Menu */
+/* Hamburger Icon */
 .hamburger {
     display: none;
     font-size: 2rem;
     color: whitesmoke;
     cursor: pointer;
+    padding-right: 20px;
 }
 
 /* Responsive Navbar */
@@ -125,7 +122,7 @@ nav ul li a {
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         padding: 20px 0;
-        text-align: center
+        text-align: center;
     }
 
     .nav-links.show {
@@ -134,45 +131,24 @@ nav ul li a {
 
     .nav-links li {
         margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .dropdown-content a {
+        padding-left: 0;
         text-align: center;
+        background-color: transparent;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 }
-
-/* Dropdown Products Menu */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: gray;
-    min-width: 220px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
-    z-index: 3;
-    top: 100%;
-    left: 0;
-    opacity: 0.9;
-}
-
-.dropdown-content a {
-    color: whitesmoke;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 1rem;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #555;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 
 /* CTA Section */
 .cta-section {
@@ -187,7 +163,7 @@ nav ul li a {
     height: 50px;
 }
 
-/* First Div - Video Section */
+/* Video Section */
 .top-section {
     position: relative;
     height: 100vh;
@@ -219,7 +195,7 @@ video {
     background-color: transparent;
 }
 
-/* Second Div - Photo Section */
+/* Collage Image */
 .collage {
     width: 101%;
     height: 100%;
@@ -230,7 +206,7 @@ video {
     margin-top: 30px;
 }
 
-/* Third Div - Products Section */
+/* Product Grid */
 .container {
     text-align: center;
     padding: 40px 20px;
@@ -290,4 +266,6 @@ h1 {
     padding: 5px 10px;
     border-radius: 4px;
     color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
 }

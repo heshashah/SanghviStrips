@@ -2,117 +2,114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sanghvi Strips</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanghvi Strips</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- Top Section -->
-    <div class="top-section">
-        <video autoplay muted loop>
-            <source src="IMG_7193.MP4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
+  <!-- Top Section -->
+  <div class="top-section">
+    <video autoplay muted loop>
+      <source src="IMG_7193.MP4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-        <header>
-            <nav>
-                <div class="navbar-brand">
-                    <img src="Sanghvi Strips.png" alt="Sanghvi Logo" class="logo-navbar" />
-                </div>
-
-                <div class="right">
-                    <ul class="right1">
-                        <li><a href="index.html"><b>Home</b></a></li>
-
-                        <!-- Products Dropdown -->
-                        <li class="dropdown">
-                            <a href="Product.html"><b>Our Products</b></a>
-                            <div class="dropdown-content">
-                                <a href="Slabs.html">Slabs</a>
-                                <a href="Blooms.html">Blooms</a>
-                                <a href="HR.html">Hot Rolled (HR) Coils</a>
-                                <a href="CR.html">Cold Rolled (CR) Coils</a>
-                                <a href="Plates.html">Plates</a>
-                            </div>
-                        </li>
-
-                        <li><a href="AboutUs.html"><b>About Us</b></a></li>
-                        <li><a href="ContactUs.html"><b>Contact Us</b></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <div>
-            <!-- Text of the video -->
-            <div class="video-center-text">
-                <h2>Sanghvi strips</h2>
-                <h5><i>Driven by a vision of a stainless steel future,</i></h5>
-                <h6><i>we forge ahead with passion.</i></h6>
-            </div>
+    <header>
+      <nav>
+        <div class="navbar-brand">
+          <img src="Sanghvi Strips.png" alt="Sanghvi Logo" class="logo-navbar" />
         </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html"><b>Home</b></a></li>
+
+          <li class="dropdown">
+            <a href="Product.html"><b>Our Products</b></a>
+            <div class="dropdown-content">
+              <a href="Slabs.html">Slabs</a>
+              <a href="Blooms.html">Blooms</a>
+              <a href="HR.html">Hot Rolled (HR) Coils</a>
+              <a href="CR.html">Cold Rolled (CR) Coils</a>
+              <a href="Plates.html">Plates</a>
+            </div>
+          </li>
+
+          <li><a href="AboutUs.html"><b>About Us</b></a></li>
+          <li><a href="ContactUs.html"><b>Contact Us</b></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Text -->
+    <div class="video-center-text">
+      <h2>Sanghvi Strips</h2>
+      <h5><i>Driven by a vision of a stainless steel future,</i></h5>
+      <h6><i>we forge ahead with passion.</i></h6>
     </div>
+  </div>
 
-    <!-- Second Section -->
-    <img src="SS_Collage.png" class="collage" alt="Collage image">
+  <!-- Photo Section -->
+  <img src="SS_Collage.png" class="collage" alt="Collage image">
 
-    <!-- Third Section -->
-    <div class="container">
-        <h1><span class="highlight">Experience Our Procduct Section</h1>
-        <div class="products">
-            <div class="product-card">
-                <a href="Product.html">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVXQVQMplUXdyw3jp-H2xPbW1mNQ6bF_j7Wg&s"
-                        alt="Slabs">
-                </a>
-                <div class="label">Slabs</div>
-            </div>
-            <div class="product-card">
-                <a href="Product.html">
-                    <img src="https://i.pinimg.com/736x/af/54/36/af54360ea7678d1ac6cf460f40eebfbd.jpg" alt="Blooms"
-                        href="Products.html">
-                </a>
-                <div class="label">Blooms</div>
-            </div>
-            <div class="product-card">
-                <a href="Product.html">
-                    <img src="https://i.pinimg.com/736x/b7/83/72/b783723340729e1899a6f10002a498d3.jpg"
-                        alt="Hot Rolled Coils" href="Products.html">
-                </a>
-                <div class="label">Hot Rolled (HR) Coils</div>
-            </div>
-            <div class="product-card">
-                <a href="Product.html">
-                    <img src="https://i.pinimg.com/736x/a4/23/12/a4231240d1a3f5680956be67b654e2fd.jpg"
-                        alt="Cold Rolled Coils" href="Products.html">
-                </a>
-                <div class="label">Cold Rolled (CR) Coils</div>
-            </div>
-            <div class="product-card">
-                <a href="Product.html">
-                    <img src="https://i.pinimg.com/736x/2b/9b/c9/2b9bc932e1ad063eea1e4b80b8b504f0.jpg" alt="Plates"
-                        href="Products.html">
-                </a>
-                <div class="label">Plates</div>
-            </div>
-            <div class="product-card">
-                <a href="Product.html">
-                    <img src="https://i.pinimg.com/736x/71/d2/78/71d27874b6e441969b79e4e76f193395.jpg"
-                        alt="Speciality Products" href="Products.html">
-                </a>
-                <div class="label">Speciality Products</div>
-            </div>
-        </div>
+  <!-- Product Grid Section -->
+  <div class="container">
+    <h1><span class="highlight">Experience Our Product Section</span></h1>
+    <div class="products">
+      <div class="product-card">
+        <a href="Slabs.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVXQVQMplUXdyw3jp-H2xPbW1mNQ6bF_j7Wg&s"
+            alt="Slabs">
+        </a>
+        <div class="label">Slabs</div>
+      </div>
+      <div class="product-card">
+        <a href="Blooms.html">
+          <img src="https://i.pinimg.com/736x/af/54/36/af54360ea7678d1ac6cf460f40eebfbd.jpg" alt="Blooms">
+        </a>
+        <div class="label">Blooms</div>
+      </div>
+      <div class="product-card">
+        <a href="HR.html">
+          <img src="https://i.pinimg.com/736x/b7/83/72/b783723340729e1899a6f10002a498d3.jpg" alt="Hot Rolled Coils">
+        </a>
+        <div class="label">Hot Rolled (HR) Coils</div>
+      </div>
+      <div class="product-card">
+        <a href="CR.html">
+          <img src="https://i.pinimg.com/736x/a4/23/12/a4231240d1a3f5680956be67b654e2fd.jpg" alt="Cold Rolled Coils">
+        </a>
+        <div class="label">Cold Rolled (CR) Coils</div>
+      </div>
+      <div class="product-card">
+        <a href="Plates.html">
+          <img src="https://i.pinimg.com/736x/2b/9b/c9/2b9bc932e1ad063eea1e4b80b8b504f0.jpg" alt="Plates">
+        </a>
+        <div class="label">Plates</div>
+      </div>
+      <div class="product-card">
+        <a href="Speciality.html">
+          <img src="https://i.pinimg.com/736x/71/d2/78/71d27874b6e441969b79e4e76f193395.jpg" alt="Speciality Products">
+        </a>
+        <div class="label">Speciality Products</div>
+      </div>
     </div>
+  </div>
 
+  <!-- CTA Footer -->
+  <div class="cta-section">
+    <div class="cta-text">Designed by Sanghvi Strips</div>
+  </div>
 
-    <!-- CTA Section -->
-    <div class="cta-section">
-        <div class="cta-text">Designed by Sanghvi Strips</div>
-    </div>
-
+  <!-- Hamburger Toggle Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 </body>
 
 </html>
