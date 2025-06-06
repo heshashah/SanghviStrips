@@ -50,7 +50,7 @@
             width: 150px;
             margin-right: 20px;
             /* Reduced from 500px */
-            
+
         }
 
         /* Nav Links */
@@ -144,27 +144,166 @@
             font-size: 16px;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 1rem;
+            .hamburger {
+                display: block;
+                margin-right: 20px;
+                /* Added right margin for hamburger on mobile */
+
             }
 
             .nav-links {
+                display: none;
                 flex-direction: column;
-                margin-top: 10px;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.95);
+                width: 50%;
+                padding: 60px 0 20px 0;
+                text-align: center;
+                z-index: 4;
+                opacity: 0.8;
+            }
+
+            .nav-links.show {
+                display: flex;
             }
 
             .nav-links li {
                 margin: 10px 0;
             }
 
+            .dropdown-content {
+                position: relative;
+                background-color: #444;
+                width: 100%;
+                box-shadow: none;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        }
+
+        /* Info Section */
+        .info-section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px 20px;
+            /* Reduced padding for better fit */
+            text-align: center;
+            color: white;
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Translucent background */
+            border-radius: 8px;
+            /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-section h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .info-section p {
+            font-size: 1.2rem;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+            position: relative;
+            /* Changed to relative to sit below content */
+            width: 100%;
+            margin-top: 100vh;
+            /* Pushes it below the viewport if content is short */
+            min-height: 50px;
+            /* Ensures it has a height even with minimal content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                /* Keep logo and hamburger on one row */
+                justify-content: space-between;
+                /* Space them out */
+                padding: 0 20px;
+                /* Adjust padding */
+                height: 80px;
+                /* Smaller height for mobile nav */
+            }
+
+            .navbar-brand {
+                align-items: center;
+            }
+
+            .logo-navbar {
+                height: 70px;
+                /* Smaller logo on mobile */
+                width: 100px;
+            }
+
+            .hamburger {
+                display: block;
+                /* Show hamburger on mobile */
+                margin-left: auto;
+                /* Push to the right */
+            }
+
+            .nav-links {
+                display: none;
+                /* Hide nav links by default */
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                /* Position below navbar */
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Darker background for menu */
+                padding: 20px 0;
+                z-index: 3;
+            }
+
+            .nav-links.show {
+                display: flex;
+                /* Show when 'show' class is active */
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .dropdown-content {
+                position: static;
+                /* Stack dropdown items vertically */
+                background-color: #555;
+                width: 100%;
+                box-shadow: none;
+                opacity: 1;
+            }
+
             .info-section {
                 width: 90%;
-                padding: 40px 10px;
-                padding-top: 200px;;
+                padding: 30px 15px;
+                /* Adjust padding for smaller screens */
+                top: 55%;
+                /* Slightly lower to accommodate smaller nav */
             }
 
             .info-section h1 {
@@ -174,9 +313,31 @@
             .info-section p {
                 font-size: 1rem;
             }
+
+            .cta-section {
+                margin-top: 100px;
+                /* Give some space after info section on small screens */
+            }
         }
 
         @media (max-width: 480px) {
+            nav {
+                padding: 0 15px;
+            }
+
+            .logo-navbar {
+                height: 60px;
+                width: 90px;
+            }
+
+            .hamburger {
+                font-size: 1.8rem;
+            }
+
+            .info-section {
+                padding: 25px 10px;
+            }
+
             .info-section h1 {
                 font-size: 1.8rem;
             }
@@ -203,7 +364,8 @@
             </div>
 
             <div class="right">
-                <ul class="nav-links">
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="Product.html">Our Products</a>
@@ -243,6 +405,12 @@
     <div class="cta-section">
         Designed by Sanghvi Strips
     </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+    </script>
 
 </body>
 

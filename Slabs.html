@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slabs</title>
+    <title>Slabs - Sanghvi Strips</title>
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -24,59 +25,58 @@
             background-size: cover;
         }
 
-        /* Navbar */
+        /* Navbar Styles */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100px;
             background-color: transparent;
-            padding: 0 40px;
+            padding: 0.5%;
             position: absolute;
             width: 100%;
             top: 0;
             z-index: 2;
         }
 
-        /* Logo + Nav Links as one group */
         .navbar-brand {
             display: flex;
             align-items: center;
-            padding-top: 40px;
+            justify-content: flex-start;
+            margin-left: 40px;
         }
 
         .logo-navbar {
+            margin-top: 30px;
             height: 100px;
             width: 150px;
-            margin-right: 20px;
-            /* Reduced from 500px */
-            
         }
 
-        /* Nav Links */
-        .nav-links {
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: whitesmoke;
+            margin-left: 5px;
+        }
+
+        nav ul {
             display: flex;
             list-style: none;
-            margin: 0;
-            padding: 0;
-            align-self: right;
+            margin-right: 20px;
         }
 
-        .nav-links li {
-            position: relative;
+        nav ul li {
             margin: 0 1rem;
         }
 
-        .nav-links li a {
+        nav ul li a {
             text-decoration: none;
             color: white;
-            /* Changed from black to white */
             font-size: 1rem;
             font-weight: bold;
-            padding: 10px;
         }
 
-        /* Dropdown Products Menu */
+        /* Dropdown Menu */
         .dropdown {
             position: relative;
         }
@@ -94,8 +94,7 @@
         }
 
         .dropdown-content a {
-            color: white;
-            /* Changed from black to white */
+            color: whitesmoke;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -105,11 +104,64 @@
 
         .dropdown-content a:hover {
             background-color: #555;
+            color: white;
         }
 
-        /* Show dropdown on hover */
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: whitesmoke;
+            cursor: pointer;
+
+            /* Removed padding-right here as it will be handled in the media query */
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                margin-right: 20px;
+                /* Added right margin for hamburger on mobile */
+
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.95);
+                width: 50%;
+                padding: 60px 0 20px 0;
+                text-align: center;
+                z-index: 4;
+                opacity: 0.8;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .dropdown-content {
+                position: relative;
+                background-color: #444;
+                width: 100%;
+                box-shadow: none;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
         }
 
         /* Info Section */
@@ -118,11 +170,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 80px 20px;
+            padding: 40px 20px;
+            /* Reduced padding for better fit */
             text-align: center;
             color: white;
             width: 80%;
             max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Translucent background */
+            border-radius: 8px;
+            /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .info-section h1 {
@@ -133,6 +191,7 @@
         .info-section p {
             font-size: 1.2rem;
             color: white;
+            line-height: 1.6;
         }
 
         /* CTA Section */
@@ -142,29 +201,87 @@
             text-align: center;
             padding: 15px 0;
             font-size: 16px;
+            position: relative;
+            /* Changed to relative to sit below content */
+            width: 100%;
+            margin-top: 100vh;
+            /* Pushes it below the viewport if content is short */
+            min-height: 50px;
+            /* Ensures it has a height even with minimal content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Responsive */
+        /* Responsive Styles */
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
-                height: auto;
-                padding: 1rem;
+                flex-direction: row;
+                /* Keep logo and hamburger on one row */
+                justify-content: space-between;
+                /* Space them out */
+                padding: 0 20px;
+                /* Adjust padding */
+                height: 80px;
+                /* Smaller height for mobile nav */
+            }
+
+            .navbar-brand {
+                align-items: center;
+            }
+
+            .logo-navbar {
+                height: 70px;
+                /* Smaller logo on mobile */
+                width: 100px;
+            }
+
+            .hamburger {
+                display: block;
+                /* Show hamburger on mobile */
+                margin-left: auto;
+                /* Push to the right */
             }
 
             .nav-links {
+                display: none;
+                /* Hide nav links by default */
                 flex-direction: column;
-                margin-top: 10px;
+                position: absolute;
+                top: 80px;
+                /* Position below navbar */
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Darker background for menu */
+                padding: 20px 0;
+                z-index: 3;
+            }
+
+            .nav-links.show {
+                display: flex;
+                /* Show when 'show' class is active */
             }
 
             .nav-links li {
                 margin: 10px 0;
             }
 
+            .dropdown-content {
+                position: static;
+                /* Stack dropdown items vertically */
+                background-color: #555;
+                width: 100%;
+                box-shadow: none;
+                opacity: 1;
+            }
+
             .info-section {
                 width: 90%;
-                padding: 40px 10px;
-                padding-top: 200px;
+                padding: 30px 15px;
+                /* Adjust padding for smaller screens */
+                top: 55%;
+                /* Slightly lower to accommodate smaller nav */
             }
 
             .info-section h1 {
@@ -174,9 +291,31 @@
             .info-section p {
                 font-size: 1rem;
             }
+
+            .cta-section {
+                margin-top: 100px;
+                /* Give some space after info section on small screens */
+            }
         }
 
         @media (max-width: 480px) {
+            nav {
+                padding: 0 15px;
+            }
+
+            .logo-navbar {
+                height: 60px;
+                width: 90px;
+            }
+
+            .hamburger {
+                font-size: 1.8rem;
+            }
+
+            .info-section {
+                padding: 25px 10px;
+            }
+
             .info-section h1 {
                 font-size: 1.8rem;
             }
@@ -194,44 +333,42 @@
 
 <body>
 
-    <!-- Top Section -->
     <div class="top-section">
-        <!-- Navbar inside top section -->
         <nav>
             <div class="navbar-brand">
                 <img src="Sanghvi Strips.png" alt="Sanghvi Logo" class="logo-navbar" />
             </div>
 
-            <div class="right">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="Product.html">Our Products</a>
-                        <div class="dropdown-content">
-                            <a href="Slabs.html">Slabs</a>
-                            <a href="Blooms.html">Blooms</a>
-                            <a href="HR.html">Hot Rolled (HR) Coils</a>
-                            <a href="CR.html">Cold Rolled (CR) Coils</a>
-                            <a href="Plates.html">Plates</a>
-                        </div>
-                    </li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li><a href="ContactUs.html">Contact Us</a></li>
-                </ul>
-            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="Product.html">Our Products</a>
+                    <div class="dropdown-content">
+                        <a href="Slabs.html">Slabs</a>
+                        <a href="Blooms.html">Blooms</a>
+                        <a href="HR.html">Hot Rolled (HR) Coils</a>
+                        <a href="CR.html">Cold Rolled (CR) Coils</a>
+                        <a href="Plates.html">Plates</a>
+                    </div>
+                </li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
         </nav>
     </div>
 
-    <!-- Info Section with white background -->
     <div class="info-section">
         <h1>Slabs</h1>
-        <p>Slabs of stainless steel are large, flat, and thick pieces of steel that serve as the initial form or
+        <p>
+            Slabs of stainless steel are large, flat, and thick pieces of steel that serve as the initial form or
             semi-finished product in the production of various stainless steel products. They are typically produced
             through a process called casting, where molten stainless steel is poured into molds and allowed to solidify.
             Once solidified, the slabs are further processed through rolling to reduce their thickness and shape them
             into
             usable forms such as sheets, plates, or coils.
-            <br>
+            <br><br>
             These stainless steel slabs are essential in the manufacturing industry, as they are often the starting
             material
             for more specialized products like structural components, automotive parts, and kitchen appliances.
@@ -240,11 +377,16 @@
         </p>
     </div>
 
-    <!-- CTA Section -->
     <div class="cta-section">
         Designed by Sanghvi Strips
     </div>
 
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+    </script>
 </body>
 
 </html>
